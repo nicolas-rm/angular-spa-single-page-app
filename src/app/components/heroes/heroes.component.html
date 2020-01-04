@@ -1,0 +1,13 @@
+<h1>Heroes <small>Marvel y DC</small> </h1>
+<hr>
+<!-- <div class="row animated fadeIn fast"> -->
+<div class="card-columns">
+    <!-- <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index"> -->
+
+    <!-- UTILIZACION DE ENVIO DE VALORES CON INPUTS -->
+    <!-- <app-heroe-tarjeta ([heroe]="heroe"): <-- ENVIO A INPUTS  [index]="i" *ngFor="let heroe of heroes; let i = index"> </app-heroe-tarjeta> -->
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index"> </app-heroe-tarjeta>
+</div>
+
+
+<!-- </div> -->
